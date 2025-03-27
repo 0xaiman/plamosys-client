@@ -82,6 +82,9 @@
     </div>
     <!-- LEFT SIDE -->
   </div>
+  <div>
+    <SensorLog :logs="mockSensorData" />
+  </div>
 </template>
 <script setup>
 import { ref } from "vue";
@@ -90,6 +93,7 @@ import RealTimeClock from "/src/components/RealTimeClock.vue";
 import TaskSnippet from "/src/components/TaskSnippet.vue";
 import Chart from "/src/components/Chart.vue";
 import WeatherWidget from "/src/components/WeatherWidget.vue";
+import SensorLog from "/src/components/SensorLog.vue";
 import VueCal from "vue-cal";
 import "vue-cal/dist/vuecal.css";
 
@@ -111,5 +115,92 @@ const lineOptions = ref({
 });
 const lineSeries = ref([
   { name: "Humidity", data: [20, 30, 25, 35, 40, 30, 50, 55] },
+]);
+
+const mockSensorData = ref([
+  {
+    id: 1,
+    sensorId: "S001",
+    parameter: "Temperature (°C)",
+    value: 25.3,
+    timestamp: "2025-03-28 10:15:00",
+  },
+  {
+    id: 2,
+    sensorId: "S001",
+    parameter: "Humidity (%)",
+    value: 60.2,
+    timestamp: "2025-03-28 10:15:00",
+  },
+  {
+    id: 3,
+    sensorId: "S001",
+    parameter: "Soil Moisture (%)",
+    value: 45.5,
+    timestamp: "2025-03-28 10:15:00",
+  },
+  {
+    id: 4,
+    sensorId: "S002",
+    parameter: "Light Intensity (Lux)",
+    value: 1200,
+    timestamp: "2025-03-28 10:16:00",
+  },
+  {
+    id: 5,
+    sensorId: "S002",
+    parameter: "CO₂ Levels (ppm)",
+    value: 400,
+    timestamp: "2025-03-28 10:16:00",
+  },
+  {
+    id: 6,
+    sensorId: "S002",
+    parameter: "Temperature (°C)",
+    value: 22.8,
+    timestamp: "2025-03-28 10:16:00",
+  },
+  {
+    id: 7,
+    sensorId: "S003",
+    parameter: "Humidity (%)",
+    value: 58.9,
+    timestamp: "2025-03-28 10:17:00",
+  },
+  {
+    id: 8,
+    sensorId: "S003",
+    parameter: "Soil Moisture (%)",
+    value: 50.1,
+    timestamp: "2025-03-28 10:17:00",
+  },
+  {
+    id: 9,
+    sensorId: "S003",
+    parameter: "Light Intensity (Lux)",
+    value: 1350,
+    timestamp: "2025-03-28 10:17:00",
+  },
+  {
+    id: 10,
+    sensorId: "S004",
+    parameter: "CO₂ Levels (ppm)",
+    value: 410,
+    timestamp: "2025-03-28 10:18:00",
+  },
+  {
+    id: 11,
+    sensorId: "S004",
+    parameter: "Temperature (°C)",
+    value: 27.1,
+    timestamp: "2025-03-28 10:18:00",
+  },
+  {
+    id: 12,
+    sensorId: "S004",
+    parameter: "Humidity (%)",
+    value: 65.3,
+    timestamp: "2025-03-28 10:18:00",
+  },
 ]);
 </script>
