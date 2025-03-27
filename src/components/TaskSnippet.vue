@@ -5,34 +5,46 @@
     <!-- Current Tasks -->
     <div class="mb-4">
       <h3 class="text-lg font-medium">Current Tasks</h3>
-      <ul class="list-disc ml-4 text-sm">
-        <li v-for="(task, index) in currentTasks" :key="'current-' + index">
+      <div class="flex flex-wrap gap-2">
+        <button
+          v-for="(task, index) in currentTasks"
+          :key="'current-' + index"
+          class="btn btn-outline btn-sm"
+        >
           {{ task }}
-        </li>
-      </ul>
-      <a href="#" class="text-xs text-blue-500">View more...</a>
+        </button>
+      </div>
+      <a href="#" class="text-xs text-blue-500 mt-2 block">View more...</a>
     </div>
 
     <!-- Overdue Tasks -->
     <div class="mb-4">
       <h3 class="text-lg font-medium text-red-500">Overdue Tasks</h3>
-      <ul class="list-disc ml-4 text-sm">
-        <li v-for="(task, index) in overdueTasks" :key="'overdue-' + index">
+      <div class="flex flex-wrap gap-2">
+        <button
+          v-for="(task, index) in overdueTasks"
+          :key="'overdue-' + index"
+          class="btn btn-outline btn-sm btn-error"
+        >
           {{ task }}
-        </li>
-      </ul>
-      <a href="#" class="text-xs text-blue-500">View more...</a>
+        </button>
+      </div>
+      <a href="#" class="text-xs text-blue-500 mt-2 block">View more...</a>
     </div>
 
     <!-- Upcoming Tasks -->
     <div>
       <h3 class="text-lg font-medium">Upcoming Tasks</h3>
-      <ul class="list-disc ml-4 text-sm">
-        <li v-for="(task, index) in upcomingTasks" :key="'upcoming-' + index">
+      <div class="flex flex-wrap gap-2">
+        <button
+          v-for="(task, index) in upcomingTasks"
+          :key="'upcoming-' + index"
+          class="btn btn-outline btn-sm btn-info"
+        >
           {{ task }}
-        </li>
-      </ul>
-      <a href="#" class="text-xs text-blue-500">View more...</a>
+        </button>
+      </div>
+      <a href="#" class="text-xs text-blue-500 mt-2 block">View more...</a>
     </div>
   </div>
 </template>
