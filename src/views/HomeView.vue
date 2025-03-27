@@ -52,13 +52,10 @@
           />
         </div>
       </div>
-
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
     </div>
     <!-- RIGHT SIDE -->
     <!-- LEFT SIDE -->
-    <div class="w-1/4">
+    <div class="w-1/4 flex flex-col gap-2">
       <WeatherWidget
         summary="No rain expected today"
         :temperature="20"
@@ -67,22 +64,25 @@
         condition="clear"
         additionalInfo="Heavy rain expected at 4PM"
       />
-      <RealTimeClock />
-      <vue-cal
-        class="vuecal--rounded-theme vuecal--green-theme"
-        xsmall
-        hide-view-selector
-        :time="false"
-        active-view="month"
-        :disable-views="['week']"
-        style="width: 100%; height: 300px"
-      >
-      </vue-cal>
+      <div class="card bg-base-100 shadow-lg p-4">
+        <RealTimeClock />
+        <vue-cal
+          class="vuecal--rounded-theme vuecal--green-theme"
+          xsmall
+          hide-view-selector
+          :time="false"
+          active-view="month"
+          :disable-views="['week']"
+          style="width: 100%; height: 300px"
+        >
+        </vue-cal>
+      </div>
+
       <TaskSnippet />
     </div>
     <!-- LEFT SIDE -->
   </div>
-  <div>
+  <div class="w-full my-4">
     <SensorLog :logs="mockSensorData" />
   </div>
 </template>
