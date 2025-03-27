@@ -86,7 +86,7 @@
       </div>
       <!-- NAVBAR END -->
       <!-- MAIN CONTENT START -->
-      <main class="flex-1 p-6">
+      <main class="flex-1 p-6 mx-20">
         <slot />
       </main>
       <!-- MAIN CONTENT END -->
