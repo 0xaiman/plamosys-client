@@ -86,7 +86,7 @@
       </div>
       <!-- NAVBAR END -->
       <!-- MAIN CONTENT START -->
-      <main class="flex-1 p-6 bg-gray-100">
+      <main class="flex-1 p-6">
         <slot />
       </main>
       <!-- MAIN CONTENT END -->
@@ -100,6 +100,7 @@
       <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/task">Task</router-link></li>
+        <li><router-link to="/data">Data</router-link></li>
         <li><router-link to="/about">About</router-link></li>
       </ul>
     </div>
