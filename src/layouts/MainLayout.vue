@@ -99,6 +99,7 @@
       ></label>
       <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
         <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/task">Task</router-link></li>
         <li><router-link to="/about">About</router-link></li>
       </ul>
     </div>
